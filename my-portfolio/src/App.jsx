@@ -1,4 +1,5 @@
 import './App.css'
+import profilePicture from './assets/Portfolio picture.jpg'
 
 function App() {
   return (
@@ -14,23 +15,43 @@ function App() {
 
       <main>
         <section id="about">
-          <h2>About Me</h2>
-          <p>
-            Hello! I'm Thando Mthethwa, a passionate Software Engineer. I specialize in mobile development, system intergration, web development and quality assurrance.
-            I'm always eager to learn new things and take on new challenges.
-          </p>
+          <div className="about-me-container">
+            <div className="profile-picture">
+              {/* You can replace this with your own image */}
+              <img src={profilePicture} alt="Your Name" />
+            </div>
+            <div className="about-me-text">
+              <h2>About Me</h2>
+              <p>
+                I am a dedicated Software Engineer with a multi-disciplinary 
+                background in mobile development, web technologies, 
+                and systems integration. My professional philosophy is built on 
+                the intersection of high-quality code and seamless user experiences. 
+                With a core focus on the Flutter and Firebase ecosystem, I specialize 
+                in architecting scalable mobile solutions that solve real-world problems.
+                
+                Beyond development, I bring a rigorous approach to Quality Assurance, 
+                ensuring that every product I build is not only functional but resilient 
+                and performant. I thrive in collaborative environments where I can leverage 
+                my expertise in Java, Python, and JavaScript to bridge the gap between complex 
+                systems and user-backend systems and intuitive frontend interfaces. I am a 
+                lifelong learner committed to staying at the forefront of emerging technologies 
+                to deliver impactful, modern software
+              </p>
+            </div>
+          </div>
         </section>
 
         <section id="projects">
           <h2>Projects</h2>
           <div className="project">
-            <h3>Project 1</h3>
-            <p>A brief description of your first project. What was the goal? What technologies did you use?</p>
+            <h3>VitaTrack</h3>
+            <p>A website for a health-tracking app that monitors your daily routine and footsteps, primarily through a smartwatch.</p>
             <a href="#">View Project</a>
           </div>
           <div className="project">
             <h3>Project 2</h3>
-            <p>A brief description of your second project. What problem did it solve? What was your role?</p>
+            <p></p>
             <a href="#">View Project</a>
           </div>
         </section>
@@ -41,7 +62,7 @@ function App() {
             I'm currently available for freelance work. If you have a project you'd like to discuss, please get in touch!
           </p>
           <p>
-            You can reach me by email at <a href="mailto:[Your Email]">[Your Email]</a>.
+            You can reach me by email at <a href="mailto:[ts.mthethwa01@gmail.com]">[Your Email]</a>.
           </p>
         </section>
       </main>
