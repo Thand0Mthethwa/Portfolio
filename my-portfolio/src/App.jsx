@@ -50,8 +50,8 @@ function App() {
             <a href="#">View Project</a>
           </div>
           <div className="project">
-            <h3>Project 2</h3>
-            <p></p>
+            <h3>ComChat</h3>
+            <p>A community chat app </p>
             <a href="#">View Project</a>
           </div>
         </section>
@@ -62,7 +62,7 @@ function App() {
             I'm currently available for freelance work. If you have a project you'd like to discuss, please get in touch!
           </p>
           <p>
-            You can reach me by email at <a href="mailto:[ts.mthethwa01@gmail.com]">[Your Email]</a>.
+            You can reach me by email at <a href="mailto:[ts.mthethwa01@gmail.com]">[ts.mthethwa01@gmail.com]</a>.
           </p>
         </section>
       </main>
