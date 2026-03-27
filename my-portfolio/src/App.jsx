@@ -1,5 +1,6 @@
 import './App.css'
 import profilePicture from './assets/Portfolio picture.jpg'
+import { motion } from "framer-motion"
 
 function App() {
   return (
@@ -16,11 +17,21 @@ function App() {
       <main>
         <section id="about">
           <div className="about-me-container">
-            <div className="profile-picture">
+            <motion.div 
+              className="profile-picture"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               {/* You can replace this with your own image */}
               <img src={profilePicture} alt="Your Name" />
-            </div>
-            <div className="about-me-text">
+            </motion.div>
+            <motion.div 
+              className="about-me-text"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <h2>About Me</h2>
               <p>
                 I am a dedicated Software Engineer with a multi-disciplinary 
@@ -38,33 +49,54 @@ function App() {
                 lifelong learner committed to staying at the forefront of emerging technologies 
                 to deliver impactful, modern software
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        <section id="projects">
+        <motion.section 
+          id="projects"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2>Projects</h2>
-          <div className="project">
+          <motion.div 
+            className="project"
+            whileHover={{ scale: 1.05 }}
+          >
             <h3>VitaTrack</h3>
             <p>A website for a health-tracking app that monitors your daily routine and footsteps, primarily through a smartwatch.</p>
             <a href="#">View Project</a>
-          </div>
-          <div className="project">
+          </motion.div>
+          <motion.div 
+            className="project"
+            whileHover={{ scale: 1.05 }}
+          >
             <h3>ComChat</h3>
             <p>A community chat app </p>
             <a href="#">View Project</a>
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
 
-        <section id="contact">
+        <motion.section 
+          id="contact"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2>Contact</h2>
           <p>
             I'm currently available for freelance work. If you have a project you'd like to discuss, please get in touch!
           </p>
           <p>
-            You can reach me by email at <a href="mailto:[ts.mthethwa01@gmail.com]">[ts.mthethwa01@gmail.com]</a>.
+            You can reach me by email at <a href="mailto:ts.mthethwa01@gmail.com">ts.mthethwa01@gmail.com</a>.
           </p>
-        </section>
+          <p>
+            You can also find me on <a href="https://www.linkedin.com/in/thando-mthethwa-0a8a27252" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+          </p>
+        </motion.section>
       </main>
 
       <footer className="footer">
